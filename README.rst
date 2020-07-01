@@ -12,10 +12,12 @@ usage
 =====
 
 Required parameters:
+
 - min: number
 - max: number
 
 Optional:
+
 - onlyGreat: bool
 - feelingLucky: bool
 
@@ -24,8 +26,9 @@ const { generateGoodNumbers } = require('./good-numbers')
 const params = {
     min: 10, max: 100, feelingLucky: false, onlyGreat: false,
   }
-  const result = generateGoodNumbers(params)
-  console.log(result) // [11,13,17,19,21,23]
+
+const result = generateGoodNumbers(params)
+console.log(result) // [11,13,17,19,21,23]
 ```
 
 ```
