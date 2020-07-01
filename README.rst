@@ -21,26 +21,24 @@ Optional:
 - onlyGreat: bool
 - feelingLucky: bool
 
-```
-const { generateGoodNumbers } = require('./good-numbers')
-const params = {
-    min: 10, max: 100, feelingLucky: false, onlyGreat: false,
-  }
+Good:
 
-const result = generateGoodNumbers(params)
-console.log(result) // [11,13,17,19,21,23]
-```
+    const { generateGoodNumbers } = require('./good-numbers')
+    const params = {
+        min: 10, max: 100, feelingLucky: false, onlyGreat: false,
+     }
+    const result = generateGoodNumbers(params)
+    console.log(result) // [11,13,17,19,21,23]
 
-```
-...
-const params = min: 10, max: 10000, feelingLucky: false, onlyGreat: true
-const result = generateGoodNumbers(params) // [13,89,233,1597]
-```
-```
-...
+Great:
+
+    const params = min: 10, max: 10000, feelingLucky: false, onlyGreat: true
+    const result = generateGoodNumbers(params) // [13,89,233,1597]
+
+Feeling Lucky:
+
 const params = min: 0, max: 10000, feelingLucky: true, onlyGreat: false
 const result = generateGoodNumbers(params) // maybe 1823
-```
 
 
 tests
