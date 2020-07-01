@@ -1,0 +1,29 @@
+{
+  "name": "good-numbers",
+  "version": "1.0.0",
+  "description": "generate fibs primes",
+  "main": "good-numbers.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktleary/goodnumbers.js.git"
+  },
+  "keywords": [
+    "good-numbers"
+  ],
+  "author": "ktleary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktleary/goodnumbers.js/issues"
+  },
+  "homepage": "https://github.com/ktleary/goodnumbers.js#readme",
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-mocha": "^7.0.1",
+    "mocha": "^8.0.1"
+  }
+}
