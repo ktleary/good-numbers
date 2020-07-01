@@ -35,8 +35,8 @@ Great:
 
 Feeling Lucky:
 
-const params = min: 0, max: 10000, feelingLucky: true, onlyGreat: false
-const result = generateGoodNumbers(params) // maybe 1823
+    const params = min: 0, max: 10000, feelingLucky: true, onlyGreat: false
+    const result = generateGoodNumbers(params) // maybe 1823
 
 ## tests
 
