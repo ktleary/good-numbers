@@ -1,27 +1,25 @@
-good numbers
-============
+# good numbers
 
 Receive a list of good or numbers between min and max range.
 
-- Good numbers are either prime or fibonacci.
-- Great numbers are both prime prime fibonacci.
+-   Good numbers are either prime or fibonacci.
+-   Great numbers are both prime prime fibonacci.
 
 Pass in `feelingLucky: true` to receive only one number from the range.
 
-usage
-=====
+## usage
 
 Required parameters:
 
-- min: number
-- max: number
+-   min: number
+-   max: number
 
 Optional:
 
-- onlyGreat: bool
-- feelingLucky: bool
+-   onlyGreat: bool
+-   feelingLucky: bool
 
-Good:
+Get Good Numbers:
 
     const { generateGoodNumbers } = require('./good-numbers')
     const params = {
@@ -40,8 +38,6 @@ Feeling Lucky:
 const params = min: 0, max: 10000, feelingLucky: true, onlyGreat: false
 const result = generateGoodNumbers(params) // maybe 1823
 
+## tests
 
-tests
-======
-
-- npm test
+-   npm test
