@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/ktleary/goodnumbers.js#readme",
   "devDependencies": {
-    "eslint": "^7.6.0",
+    "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-mocha": "^8.0.0",
-    "mocha": "^8.1.1"
+    "mocha": "^8.1.3"
   }
 }
