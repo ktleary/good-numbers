@@ -3,7 +3,7 @@ devDependencies:
   eslint-config-airbnb-base: 14.2.0_3a1fce794bc129e59feb46aec1bbca0d
   eslint-plugin-import: 2.22.1_eslint@7.12.1
   eslint-plugin-mocha: 8.0.0_eslint@7.12.1
-  mocha: 8.2.0
+  mocha: 8.2.1
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.10.4:
@@ -1040,7 +1040,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
-  /mocha/8.2.0:
+  /mocha/8.2.1:
     dependencies:
       '@ungap/promise-all-settled': 1.1.2
       ansi-colors: 4.1.1
@@ -1072,7 +1072,7 @@ packages:
       node: '>= 10.12.0'
     hasBin: true
     resolution:
-      integrity: sha512-lEWEMq2LMfNJMKeuEwb5UELi+OgFDollXaytR5ggQcHpzG3NP/R7rvixAvF+9/lLsTWhWG+4yD2M70GsM06nxw==
+      integrity: sha512-cuLBVfyFfFqbNR0uUKbDGXKGk+UDFe6aR4os78XIrMQpZl/nv7JYHcvP5MFIAb374b2zFXsdgEGwmzMtP0Xg8w==
   /ms/2.0.0:
     dev: true
     resolution:
@@ -1708,4 +1708,4 @@ specifiers:
   eslint-config-airbnb-base: ^14.2.0
   eslint-plugin-import: ^2.22.1
   eslint-plugin-mocha: ^8.0.0
-  mocha: ^8.2.0
+  mocha: ^8.2.1
