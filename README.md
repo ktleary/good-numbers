@@ -2,8 +2,8 @@
 
 Receive a list of good or numbers between min and max range.
 
--   Good numbers are either prime or fibonacci.
--   Great numbers are both prime prime fibonacci.
+- Good numbers are either prime or fibonacci.
+- Great numbers are both prime prime fibonacci.
 
 Pass in `feelingLucky: true` to receive only one number from the range.
 
@@ -11,13 +11,13 @@ Pass in `feelingLucky: true` to receive only one number from the range.
 
 Required parameters:
 
--   min: number
--   max: number
+- min: number
+- max: number
 
 Optional:
 
--   onlyGreat: bool
--   feelingLucky: bool
+- onlyGreat: bool
+- feelingLucky: bool
 
 Get Good Numbers:
 
@@ -40,4 +40,4 @@ Feeling Lucky:
 
 ## tests
 
--   npm test
+- npm test
