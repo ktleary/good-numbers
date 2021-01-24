@@ -1,4 +1,4 @@
-const { generateGoodNumbers } = require('./good-numbers')
+const { generateGoodNumbers } = require("./good-numbers");
 
 function main() {
   const options = {
@@ -6,9 +6,10 @@ function main() {
     max: 10000,
     feelingLucky: false,
     onlyGreat: true,
-  }
-  const result = generateGoodNumbers(options)
-  console.log(JSON.stringify(result)) // eslint-disable-line no-console
+  };
+  const result = generateGoodNumbers(options);
+  return console.log(JSON.stringify(result)); // eslint-disable-line no-console
 }
 
-main()
+// eslint-disable-next-line
+main();

@@ -1,19 +1,15 @@
-function isPrime(num) {
-  if (num < 3 || num % 2 === 0) return false;
-  for (let i = 3; i < num; i++) {
-    if (num % i === 0) return false;
-  }
-  return true;
+function isPrime(num, idx = 2) {
+  if (num <= 2) return num === 2;
+  if (num % idx === 0) return false;
+  if (idx * idx > num) return true;
+
+  return isPrime(num, idx + 1);
 }
 
-function generatePrimes(limit) {
-  const primes = [];
-  let i = 0;
-  while (i < limit) {
-    if (isPrime(i)) primes.push(i);
-    i++;
-  }
-  return primes;
+function generatePrimes(limit = 100, primes = [], idx = 0) {
+  if (idx - 1 === limit) return primes;
+  const updated = isPrime(idx) ? [...primes, idx] : [...primes];
+  return generatePrimes(limit, updated, idx + 1);
 }
 
 function isFibonacci(num, a = 0, b = 1) {
@@ -33,19 +29,20 @@ function generateGoodNumbers({
   feelingLucky = false,
 }) {
   if (min > max) return -1;
-  const numbers = [];
-  let i = min;
-  while (i <= max) {
-    if (onlyGreat && isGreatNumber(i)) numbers.push(i);
-    if (!onlyGreat && isGoodNumber(i)) numbers.push(i);
-    i++;
-  }
-  if (feelingLucky) {
-    return getRandomFromArr(numbers);
-  }
-  return numbers;
+
+  const numbers = Array(max)
+    .fill(0)
+    .map((_, i) => i)
+    .filter(
+      n =>
+        n >= min &&
+        ((onlyGreat && isGreatNumber(n)) || (!onlyGreat && isGoodNumber(n)))
+    );
+
+  return feelingLucky ? getRandomFromArr(numbers) : numbers;
 }
 
+// eslint-disable-next-line
 module.exports = {
   isPrime,
   generatePrimes,
