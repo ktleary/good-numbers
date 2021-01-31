@@ -51,6 +51,7 @@ const generatePrimes = (limit = 100, primes = [], idx = 0) =>
     : generatePrimes(limit, includeIfTrue(idx, primes, isPrime), inc(idx));
 
 const isFibonacci = (num, a = 0, b = 1) => {
+  if (!num || !b) return false;
   if (sumGreaterN(a, b, num)) return false;
   if (sumEqualN(a, b, num)) return true;
   return isFibonacci(num, b, add(a, b));
@@ -59,10 +60,25 @@ const isFibonacci = (num, a = 0, b = 1) => {
 const isGreatNumber = num => and(isFibonacci(num), isPrime(num));
 const isGoodNumber = num => or(isFibonacci(num), isPrime(num));
 
+/*
+ n =>
+        n >= min &&
+        ((onlyGreat && isGreatNumber(n)) || (!onlyGreat && isGoodNumber(n)))
+        */
+
+const onlyGreatN = (onlyGreat, isGreatNumber, n) =>
+  onlyGreat && isGreatNumber(n);
+
+const notOnlyGreatButGood = (onlyGreat, isGoodNumber, n) =>
+  and(not(onlyGreat), isGoodNumber(n));
+
 const numberFilter = (min, onlyGreat, n) =>
-  or(
-    and(gte(n, min), and(onlyGreat, isGreatNumber(n))),
-    and(not(onlyGreat), isGoodNumber(n))
+  and(
+    gte(n, min),
+    or(
+      onlyGreatN(onlyGreat, isGreatNumber, n),
+      notOnlyGreatButGood(onlyGreat, isGoodNumber, n)
+    )
   );
 const numberFilterWMinOnlyGreat = curry(numberFilter);
 
