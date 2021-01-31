@@ -1,15 +1,16 @@
 const { generateGoodNumbers } = require("./good-numbers");
 
 function main() {
+  const writeLn = content => console.log(content);
   const options = {
-    min: 0,
-    max: 10000,
-    feelingLucky: false,
-    onlyGreat: true,
+    min: 1,
+    max: 10,
+    feelingLucky: true,
+    onlyGreat: false,
   };
-  const result = generateGoodNumbers(options);
-  return console.log(JSON.stringify(result)); // eslint-disable-line no-console
+
+  return writeLn(generateGoodNumbers(options));
 }
 
-// eslint-disable-next-line
+/* eslint-disable fp/no-unused-expression */
 main();
