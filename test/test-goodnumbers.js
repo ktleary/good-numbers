@@ -9,7 +9,7 @@ const {
   isGreatNumber,
   luckyNumber,
   generateGoodNumbers,
-  getRandomFromArr,
+  getRandomFromList,
 } = require('../good-numbers');
 
 describe('Prime and Fibonacci Numbers', () => {
@@ -57,12 +57,12 @@ describe('Prime and Fibonacci Numbers', () => {
   describe('Test random from Array', () => {
     it('should return one number', () => {
       const arr = [2, 4, 6, 8];
-      const result = getRandomFromArr(arr);
+      const result = getRandomFromList(arr);
       assert.equal(true, typeof result === 'number' && arr.includes(result));
     });
     it('should return one of one numbers', () => {
       const arr = [2];
-      const result = getRandomFromArr(arr);
+      const result = getRandomFromList(arr);
       assert.equal(true, typeof result === 'number' && arr.includes(result));
     });
   });
@@ -75,11 +75,11 @@ describe('Prime and Fibonacci Numbers', () => {
       };
       assert.deepEqual(goodUnder25, generateGoodNumbers(options));
     });
-    it('should return all greatNumbers numbers below 100,000', () => {
-      const greatUnder100k = [2, 3, 5, 13, 89, 233, 1597, 28657];
+    it('should return all greatNumbers numbers below 10,000', () => {
+      const greatUnder100k = [2, 3, 5, 13, 89, 233, 1597];
       const options = {
-        min: 0,
-        max: 100000,
+        min: 1,
+        max: 10000,
         onlyGreat: true,
       };
       assert.deepEqual(greatUnder100k, generateGoodNumbers(options));
@@ -104,22 +104,22 @@ describe('Prime and Fibonacci Numbers', () => {
       const result = generateGoodNumbers(options);
       assert.equal(true, isGoodNumber(result));
     });
-    it('should return one greatNumber number between 5000000 and 10000000', () => {
+    it('should return one greatNumber number between 500 and 2000', () => {
       const options = {
-        min: 10,
-        max: 100000,
+        min: 500,
+        max: 2000,
         onlyGreat: true,
         feelingLucky: true,
       };
       const result = generateGoodNumbers(options);
       assert.equal(true, isGreatNumber(result));
     });
-    it('should return -1 if min is greater than max', () => {
+    it('should return [] if min is greater than max', () => {
       const options = {
         min: 100,
         max: 10,
       };
-      assert.equal(-1, generateGoodNumbers(options));
+      assert.deepEqual([], generateGoodNumbers(options));
     });
     it('should return [] if no options are supplied', () => {
       const options = {};
